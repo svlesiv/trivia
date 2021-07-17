@@ -60,7 +60,6 @@ class TriviaTestCase(unittest.TestCase):
         self.assertEqual(res.status_code, 200)
         self.assertEqual(data['success'], True)
         self.assertTrue(data['categories'])
-        self.assertTrue(data['total_categories'])
 
         # test 404 ???
 

@@ -32,7 +32,7 @@ def create_app(test_config=None):
     CORS(app)
 
     '''
-    Use the after_request decorator to set Access-Control-Allow
+    Use the after_request decorator to set Access-Control-Allow.
     '''
     @app.after_request
     def after_request(response):
@@ -58,7 +58,6 @@ def create_app(test_config=None):
             'categories': {
                 category.id: category.type for category in categories
             },
-            'total_categories': len(categories)
         })
 
     '''
